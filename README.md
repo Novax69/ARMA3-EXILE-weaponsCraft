@@ -22,8 +22,6 @@ and add below :
 
         #include "Custom\Crafts\accessoriesCrafts.hpp"
         #include "Custom\Crafts\ammoCrafts.hpp"
-        #include "Custom\Crafts\bagsCrafts.hpp"
-        #include "Custom\Crafts\clothesCrafts.hpp"
         #include "Custom\Crafts\itemsCrafts.hpp"
         #include "Custom\Crafts\launchersCrafts.hpp"
         #include "Custom\Crafts\pistolsCrafts.hpp"
@@ -46,8 +44,6 @@ Then search for class CfgCraftingRecipes and add :
 
         #include "Custom\Crafts\accessoriesCrafts.hpp"
         #include "Custom\Crafts\ammoCrafts.hpp"
-        #include "Custom\Crafts\bagsCrafts.hpp"
-        #include "Custom\Crafts\clothesCrafts.hpp"
         #include "Custom\Crafts\itemsCrafts.hpp"
         #include "Custom\Crafts\launchersCrafts.hpp"
         #include "Custom\Crafts\pistolsCrafts.hpp"
