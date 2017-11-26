@@ -20,6 +20,7 @@ Open config.cpp, search for class CfgCraftingRecipes
 
 and add below : 
 
+        #include "Custom\Crafts\meleeCrafts.hpp"
         #include "Custom\Crafts\accessoriesCrafts.hpp"
         #include "Custom\Crafts\ammoCrafts.hpp"
         #include "Custom\Crafts\itemsCrafts.hpp"
@@ -42,6 +43,7 @@ Add this line :     ExileClient_object_item_craft = "Custom\Crafts\ExileClient_o
 
 Then search for class CfgCraftingRecipes and add : 
 
+        #include "Custom\Crafts\meleeCrafts.hpp"
         #include "Custom\Crafts\accessoriesCrafts.hpp"
         #include "Custom\Crafts\ammoCrafts.hpp"
         #include "Custom\Crafts\itemsCrafts.hpp"
