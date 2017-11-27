@@ -218,13 +218,13 @@ if (_metSideConditions) then
 								_weaponHolder = _weaponHolders select 0;
 							};
 					
-							if (_returnedItemClassName == "Exile_Item_WoodPlank") then
+							if (_returnedItemClassName isKindOf [_returnedItemClassName, configFile >> "CfgWeapons"]) then
 							{
-								player addItem _returnedItemClassName;
+								_weaponHolder addItemCargoGlobal [_returnedItemClassName, 1];
 							} 
 							else
 							{
-								_weaponHolder addItemCargoGlobal [_returnedItemClassName, 1];
+								player addItem _returnedItemClassName;
 							};
 
 						};
@@ -255,12 +255,12 @@ if (_quantityCrafted > -1) then
 		}
 		forEach _addedItems;
 		
-		if(_returnedItemClassName == "Exile_Item_WoodPlank") then
-		{
-		["SuccessTitleAndText", ["Items are in your bag !", _feebackMessage]] call ExileClient_gui_toaster_addTemplateToast;
-		} else
+		if (_returnedItemClassName isKindOf [_returnedItemClassName, configFile >> "CfgWeapons"]) then
 		{
 		["SuccessTitleAndText", ["Items are on the floor !", _feedbackMessage]] call ExileClient_gui_toaster_addTemplateToast;
+		} else
+		{
+		["SuccessTitleAndText", ["Items are in your bag !", _feebackMessage]] call ExileClient_gui_toaster_addTemplateToast;
 		};
 		
 	}
